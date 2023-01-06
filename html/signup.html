@@ -5,9 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Signup</title>
+    <link rel="shortcut icon" href="../img/logo.png" />
     <style>
         body {
             font-family: 'Courier New', Courier, monospace;
+            margin: 0;
         }
         input[type = text],input[type = password] {
             width: 50%;
@@ -29,9 +31,17 @@
         button:hover {
             opacity: 0.8;
         }
+
+        #menu_bar   {
+            position: sticky;
+            z-index: 1;
+            height: 10vh;
+            width: 100%;
+        }
     </style>
 </head>
 <body>
+    <iframe src="./menu.html" id="menu_bar"></iframe>
     <h2>Sign up</h2>
     <form action="action">
         <div class = "container">
