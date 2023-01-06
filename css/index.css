@@ -1,0 +1,13 @@
+#menu_bar   {
+    position: fixed;
+    z-index: 1;
+    height: 10vh;
+    width: 100%;
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+body    {
+    margin: 0
+}

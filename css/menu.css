@@ -1,10 +1,10 @@
 #logo {
-    position: fixed; top: 0vh; left: 3.33vh;
-    height: 10vh;
+    position: fixed; top: 0vh; left: 33.3vh;
+    height: 100vh;
   }
   #background_toolbar {
     position: fixed; top: 0; left: 0;
-    height: 10vh; width: 100%; z-index: 10;
+    height: 100vh; width: 100%;
     background-color: rgba(0, 114, 52, 0.5);
     background-color: #a06c4f;
     border-bottom: 1px solid rgba(114, 0, 62, 1);
@@ -13,19 +13,19 @@
   .menu_options  {
     letter-spacing: 1px; font-family: Source Sans Pro;
     position: relative; 
-    display: inline-block; padding: 4vh; font-size: 2vh; color: black;
+    display: inline-block; padding: 40vh; font-size: 20vh; color: black;
   }
   .menu_options:hover  {
     color: grey;
   }
-  @media only screen and (max-width: 125vh) {
+  @media only screen and (max-width: 1250vh) {
     .menu_options {
-      padding: 4vh; font-size: 1.7vw;
+      padding: 40vh; font-size: 1.7vw;
       padding-left: 1.7vw;
       padding-right: 1.7vw;
     }
   }
-  @media only screen and (min-width: 125.01vh)  {
+  @media only screen and (min-width: 1250.1vh)  {
     .panel  {
       display: none;
     }
