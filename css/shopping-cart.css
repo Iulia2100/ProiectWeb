@@ -1,0 +1,119 @@
+#menu_bar   {
+    position: sticky;
+    z-index: 1;
+    height: 10vh;
+    width: 100%;
+}
+
+body    {
+    margin: 0
+}
+
+
+.cart   {
+    width: 90%;
+    left: 10%;
+    padding: 1vh;
+}
+
+.cart-table {
+    width: 100%;
+}
+
+.items  {
+    padding: 2vh;
+    width: 100%;
+    display: flex;
+    vertical-align: middle;
+}
+
+.odd  {
+    background-color: rgb(253, 250, 250);
+}
+
+.even {
+    background-color: rgb(255, 255, 255);
+}
+
+.items:hover    {
+    background-color: #F7F5EB;
+}
+
+.product-image  {
+    height: 25vh;
+    
+}
+
+.product-name   {
+    font-size: 6vh;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: 550;
+    color:rgb(60, 60, 60)
+}
+
+.product-subtitle    {
+    font-size: 3vh;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: 500;
+    color:rgb(75, 75, 75)
+
+}
+
+.product-description    {
+    margin-top: 3%;
+    margin-left: 8vw;
+    display: block;
+    width: 40%;
+}
+
+.product-quantity   {
+    margin: 5%;
+    margin-left: 10vw;
+    text-align: center;
+    height: 5vh;
+    width: 5vh;
+    background-color: rgb(253, 250, 250);
+}
+
+.product-price  {
+    margin-top: 10vh;
+    margin-left: 5%;
+    font-size: 3vh;
+    font-family:'Courier New', Courier, monospace;
+    color:rgb(75, 75, 75)
+}
+
+.delete-button  {
+    height: 8vh;
+    margin-top: 10vh;
+    margin-left: 10vw;
+}
+
+.delete-button:hover    {
+    cursor: pointer;
+}
+
+.shopping-cart-title    {
+    width: 100vw;
+    padding-left: 10vw;
+    font-family:'Courier New', Courier, monospace;
+    color:rgb(40, 40, 40);
+    display: flex;
+}
+
+#continue-shopping  {
+    background-color: #A0C3D2;
+    font-family:'Courier New', Courier, monospace;
+    color:rgb(40, 40, 40);
+    position: absolute;
+    right: 10vw;
+    border-radius: 50px;
+    height: 5vh;
+    margin-top: 4vh;
+    border: 0;
+}
+
+#continue-shopping:hover{
+    background-color: #EAE0DA;
+    color: black
+}

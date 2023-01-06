@@ -1,5 +1,5 @@
 #menu_bar   {
-    position: fixed;
+    position: sticky;
     z-index: 1;
     height: 10vh;
     width: 100%;
