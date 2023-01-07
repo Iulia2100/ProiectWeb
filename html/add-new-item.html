@@ -34,27 +34,48 @@
                     <tr>
                         <td><label for="name">
                             Name:<br>
-                            <input type="text" name="name" placeholder="Product name"/>
+                            <input type="text" name="name" placeholder="Product name" required/>
                         </label></td>
                         <td><label for="price">
                             Price:<br>
-                            <input type="text" name="price" placeholder="Price"/>
+                            <input type="number" name="price" placeholder="Price" step=".01" required/>
                         </label></td>
                     </tr>
                     <tr>
                         <td><label for="quantity">
                             Quantity:<br>
-                            <input type="text" name="quantity" placeholder="Available quantity"/>
+                            <input type="number" name="quantity" step="1" placeholder="Available quantity" required/>
                         </label></td>
                         <td><label for="category">
                             Category:<br>
-                            <input type="text" name="category" placeholder="Category"/>
+                            <select name="category" required>
+                                <option value="" selected disabled hidden>Choose a category</option>
+                                <option value="coffee-tea">Coffee/Tea</option>
+                                <option value="clothes">Clothes</option>
+                                <option value="personal-care">Personal Care</option>
+                                <option value="shoes">Shoes</option>
+                                <option value="fitness">Fitness</option>
+                                <option value="">Other</option>
+                            </select>
                         </label></td>
                     </tr>
                     <tr>
                         <td><label for="color">
                             Color:<br>
-                            <input type="text" name="color" placeholder="Color"/>
+                            <select name="color">
+                                <option value="" selected disabled hidden>Choose a color</option>
+                                <option value="red">Red</option>
+                                <option value="red">Orange</option>
+                                <option value="red">Yellow</option>
+                                <option value="red">Green</option>
+                                <option value="red">Blue</option>
+                                <option value="red">Purple</option>
+                                <option value="red">Pink</option>
+                                <option value="red">White</option>
+                                <option value="red">Black</option>
+                                <option value="">Other</option>
+                            </select>
+                            <!-- <input type="text" name="color" placeholder="Color"/> -->
                         </label></td>
                         <td><label for="brand">
                             Brand:<br>

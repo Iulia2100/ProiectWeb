@@ -61,7 +61,7 @@ table   {
     height: 100%;
 }
 
-input[type = text] {
+input[type=text], input[type=number], select {
     width: 70%;
     padding: 12px 20px;
     margin: 0.1vw 0;
