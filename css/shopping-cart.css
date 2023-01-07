@@ -115,12 +115,13 @@ tr  {
     margin-top: 8vh;
     margin-left: 10vw;
     font-size: 3vh;
-    color:rgb(75, 75, 75)
+    color:rgb(75, 75, 75);
+    width: 10vw;
 }
 
 .delete-button  {
-    height: 8vh;
-    margin-top: 7vh;
+    height: 5vh;
+    margin-top: 8.5vh;
     margin-left: 10vw;
     margin-right: 0;
 }
