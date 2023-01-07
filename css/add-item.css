@@ -86,13 +86,14 @@ label   {
 }
 
 label[for="description"]    {
-    margin-left: 5%;
+    margin-left: 5.4%;
 }
 
-input[name="description"]   {
-    width: 85%;
+textarea   {
+    width: 83.7%;
     height: 70%;
-    margin-left: 5%;
+    margin-left: 5.4%;
+    border-color: #ccc;
 }
 
 .page-epilogue  {
