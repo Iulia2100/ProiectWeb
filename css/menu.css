@@ -10,7 +10,7 @@
     z-index: -1;
   }
   .menu_options  {
-    letter-spacing: 1px; font-family: Source Sans Pro;
+    letter-spacing: 1px; font-family: 'Courier New', Courier, monospace;
     position: relative; 
     display: inline-block; padding: 40vh; font-size: 20vh; color: black;
   }
