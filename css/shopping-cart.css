@@ -1,3 +1,7 @@
+body    {
+    font-family:'Courier New', Courier, monospace;
+}
+
 .cart   {
     width: 90%;
     left: 10%;
@@ -32,16 +36,14 @@
     
 }
 
-.product-name   {
+.title   {
     font-size: 6vh;
-    font-family:'Courier New', Courier, monospace;
     font-weight: 550;
     color:rgb(60, 60, 60)
 }
 
 .product-subtitle    {
     font-size: 3vh;
-    font-family:'Courier New', Courier, monospace;
     font-weight: 500;
     color:rgb(75, 75, 75)
 
@@ -67,7 +69,6 @@
     margin-top: 10vh;
     margin-left: 5%;
     font-size: 3vh;
-    font-family:'Courier New', Courier, monospace;
     color:rgb(75, 75, 75)
 }
 
@@ -85,36 +86,75 @@
 .shopping-cart-title    {
     width: 100vw;
     padding-left: 10vw;
-    font-family:'Courier New', Courier, monospace;
     color:rgb(40, 40, 40);
     display: flex;
 }
 
-#continue-shopping  {
+button  {
     background-color: #A0C3D2;
-    font-family:'Courier New', Courier, monospace;
     color:rgb(40, 40, 40);
-    position: absolute;
-    right: 10vw;
     border-radius: 50px;
     height: 5vh;
-    margin-top: 4vh;
     border: 0;
 }
 
-#continue-shopping:hover{
+button:hover    {
     background-color: #EAE0DA;
     color: black
 }
 
+#continue-shopping  {
+    position: absolute;
+    right: 10vw;
+    margin-top: 4vh;
+}
+
+
+.total  {
+    padding: 2vh;
+    width: 100%;
+    display: flex;
+    vertical-align: middle;
+    margin-top: 10vh;
+    margin-left: 30%
+
+}
+
+.total-price    {
+    margin-left: 25%;
+    font-size: 4vh;
+    color:rgb(75, 75, 75)
+}
+
+.checkout   {
+    margin-left: 70%;
+    font-size: 4vh;
+    font-weight: 550;
+    padding: 2vh;
+    height: 8vh;
+}
+
+
 @media only screen and (min-width: 100.01vh)    {
     .delete-button  {
         margin-left: 10vw;
+    }
+    .total  {
+        margin-left: 30%;
+    }
+    .total-price    {
+        margin-left: 25%;
     }
 }
 
 @media only screen and (max-width: 100vh) {
     .delete-button  {
         margin-left: 1vw
+    }
+    .total  {
+        margin-left: 20%;
+    }
+    .total-price    {
+        margin-left: 10%;
     }
 }
