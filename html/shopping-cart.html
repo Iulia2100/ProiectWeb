@@ -11,91 +11,75 @@
   <body>
     <iframe src="./menu.html" id="menu_bar"></iframe>
 
-
-    <hr>
-    <div class="shopping-cart-title">
-        <h1>My cart</h1>
-        <button id="continue-shopping">Continue shopping ➡️</button>
+    <div class="page-title">
+        <div class="title">
+            <div style="display:flex; flex-wrap: nowrap;">
+                My cart
+                <button class="button continue-shopping">Continue shopping
+                    <img class="arrow" src="../img/arrow.png"/>
+                </button>
+            </div>
+        </div>
     </div>
     <hr>
 
-
-    <div class="cart">
-        <ul class="cart-table">
-            <li class="items odd">
-                <img class="product-image" src="../img/tea.png"/>
-                <div class="product-description">
-                    <div class="title">Mint tea</div>
-                    <div class="product-subtitle"> Yummy tea that tastes like some really yummy tea and mint. This is a long line of text to check how it's displayed!</div>                
-                    <input class="product-quantity" type="numeric" value="2"/>
-                </div>
-                <div class="product-price">$5,42</div>
-                <img class="delete-button" src="../img/delete.png">
-            </li>
-            <li class="items even">
-                <img class="product-image" src="../img/tea.png"/>
-                <div class="product-description">
-                    <div class="title">Mint tea</div>
-                    <div class="product-subtitle"> Yummy tea!!</div>
-                    <input class="product-quantity" type="numeric" value="2"/>
-                </div>
-                <div class="product-price">$5,42</div>
-                <img class="delete-button" src="../img/delete.png">
-
-            </li>
-            <li class="items odd">
-                <img class="product-image" src="../img/tea.png"/>
-                <div class="product-description">
-                    <div class="title">Mint tea</div>
-                    <div class="product-subtitle"> Yummy tea!!</div>
-                    <input class="product-quantity" type="numeric" value="2"/>
-                </div>
-                <div class="product-price">$5,42</div>
-                <img class="delete-button" src="../img/delete.png">
-                
-            </li>
-            <li class="items even">
-                <img class="product-image" src="../img/tea.png"/>
-                <div class="product-description">
-                    <div class="title">Mint tea</div>
-                    <div class="product-subtitle"> Yummy tea!!</div>
-                    <input class="product-quantity" type="numeric" value="10"/>
-                </div>
-                <div class="product-price">$27,1</div>
-                <img class="delete-button" src="../img/delete.png">
-
-            </li>
-            <li class="items odd">
-                <img class="product-image" src="../img/tea.png"/>
-                <div class="product-description">
-                    <div class="title">Mint tea</div>
-                    <div class="product-subtitle"> Yummy tea!!</div>
-                    <input class="product-quantity" type="numeric" value="1"/>
-                </div>
-                <div class="product-price">$2,71</div>
-                <img class="delete-button" src="../img/delete.png">
-                
-            </li>
-            <li class="items even">
-                <img class="product-image" src="../img/tea.png"/>
-                <div class="product-description">
-                    <div class="title">Mint tea</div>
-                    <div class="product-subtitle"> Yummy tea!!</div>
-                    <input class="product-quantity" type="numeric" value="2"/>
-                </div>
-                <div class="product-price">$5,42</div>
-                <img class="delete-button" src="../img/delete.png">
-
-            </li>
-            <hr>
-            <li class="total title">
-                Total:
-                <div class="total-price">$123,12</div>
-            </li>
-            <hr>
-        </ul>
+    <div class="main-page">
+        <table>
+            <tr class="items odd">
+                <td><img class="product-image" src="../img/tea.png"/></td>
+                <td><div class="product-description">
+                    <div class="product-title">Yummy mint tea</div>
+                    <div class="product-subtitle"> 200g </div>           
+                </div></td>
+                <td><input class="product-quantity" type="number" value="2"/></td>
+                <td><div class="product-price">$5,42</div></td>
+                <td><img class="delete-button" src="../img/delete.png"></td>
+            </tr>   
+            <tr class="items even">
+                <td><img class="product-image" src="../img/tea.png"/></td>
+                <td><div class="product-description">
+                    <div class="product-title">Yummy mint tea</div>
+                    <div class="product-subtitle"> 200g </div>           
+                </div></td>
+                <td><input class="product-quantity" type="number" value="2"/></td>
+                <td><div class="product-price">$5,42</div></td>
+                <td><img class="delete-button" src="../img/delete.png"></td>
+            </tr>            
+            <tr class="items odd">
+                <td><img class="product-image" src="../img/tea.png"/></td>
+                <td><div class="product-description">
+                    <div class="product-title">Yummy mint tea</div>
+                    <div class="product-subtitle"> 200g </div>           
+                </div></td>
+                <td><input class="product-quantity" type="number" value="2"/></td>
+                <td><div class="product-price">$5,42</div></td>
+                <td><img class="delete-button" src="../img/delete.png"></td>
+            </tr>  
+            <tr class="items even">
+                <td><img class="product-image" src="../img/tea.png"/></td>
+                <td><div class="product-description">
+                    <div class="product-title">Yummy super cool</div>
+                    <div class="product-subtitle"> 100g </div>           
+                </div></td>
+                <td><input class="product-quantity" type="number" value="5"/></td>
+                <td><div class="product-price">$10,42</div></td>
+                <td><img class="delete-button" src="../img/delete.png"></td>
+            </tr>   
+        </table>
     </div>
-    <button class="checkout">Checkout</button>
+
+    <hr>
+    <div class="page-epilogue">
+        <div class="total">
+            Total: <div class="total-price">$123,12</div>
+        </div>
+        <hr>
+        <button class="checkout button">Proceed to checkout
+            <img class="arrow" src="../img/arrow.png"/>
+        </button>
+    </div>
+    <br>
+
   </body>
 </html>
 
