@@ -87,6 +87,7 @@ body    {
     height: 8vh;
     margin-top: 10vh;
     margin-left: 10vw;
+    margin-right: 0;
 }
 
 .delete-button:hover    {
@@ -116,4 +117,16 @@ body    {
 #continue-shopping:hover{
     background-color: #EAE0DA;
     color: black
+}
+
+@media only screen and (min-width: 100.01vh)    {
+    .delete-button  {
+        margin-left: 10vw;
+    }
+}
+
+@media only screen and (max-width: 100vh) {
+    .delete-button  {
+        margin-left: 1vw
+    }
 }
