@@ -1,0 +1,116 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+}
+input[type = text] {
+    width: 60%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+button[name=button1] {
+    background-color: rgb(217, 173, 180);
+    color: black;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 10%;
+}
+button[name=button2] {
+    background-color: rgb(217, 173, 180);
+    color: black;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 75%;
+}
+button:hover {
+    opacity: 0.8;
+}
+
+label > input[type="checkbox"] {
+    display: none;
+}
+
+label > input[type="checkbox"] + *::before {
+    content: "";
+    display: inline-block;
+    vertical-align: bottom;
+    width: 0.8rem;
+    height: 0.8rem;
+    margin-right: 0.3rem;
+    border-radius: 10%;
+    border-style: solid;
+    border-width: 0.1rem;
+    border-color: gray;
+    flex-shrink: 0;
+  
+}
+
+label > input[type="checkbox"]:checked + * {
+    color: rgb(228, 170, 203);
+  
+}
+
+input[type="checkbox"]:checked + *::before {
+    color: white;
+    text-align: center;
+    background: rgb(228, 170, 203);
+}
+.slider:hover {
+    opacity: 1;
+}
+
+.slidecontainer {
+    background-color: rgb(244, 180, 191);
+}
+
+input[type="range"] {
+    background-color: pink;
+    color: pink;
+    border:rgb(217, 173, 180);
+    width: 80%;
+}
+
+.rate {
+    float: left;
+    height: 46px;
+    padding: 0 10px;
+}
+.rate:not(:checked) > input {
+    position:absolute;
+    top:-9999px;
+}
+.rate:not(:checked) > label {
+    float:right;
+    width:1em;
+    overflow:hidden;
+    white-space:nowrap;
+    cursor:pointer;
+    font-size:30px;
+    color:#ccc;
+}
+.rate:not(:checked) > label:before {
+    content: '★ ';
+}
+.rate > input:checked ~ label {
+    color: rgb(228, 170, 203);    
+}
+.rate:not(:checked) > label:hover,
+.rate:not(:checked) > label:hover ~ label {
+    color: rgb(228, 170, 203);  
+}
+.rate > input:checked + label:hover,
+.rate > input:checked + label:hover ~ label,
+.rate > input:checked ~ label:hover,
+.rate > input:checked ~ label:hover ~ label,
+.rate > label:hover ~ input:checked ~ label {
+    color:rgb(228, 170, 203);
+}
+
+.filter_bar {
+    background-color: rgb(255, 245, 238);
+}
