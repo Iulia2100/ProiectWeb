@@ -3,12 +3,22 @@
     font-family: 'Courier New', Courier, monospace;
 }
 
-.homepage   {
-    width: 80%;
-    margin-left: 10%;
+.page-title {
+    height: 3vh;
+    width: 95%;
+    padding: 3.5vh;
 }
 
-p   {
-    margin: 4%;
-    margin-top: 3%;
+.main-page  {
+    padding-left: 3vh;
+    padding-right: 3vh;
+    height: 55vh;
+    width: 95%;
+    display: flex;
+}
+
+.title  {
+    height: 100%;
+    margin-left: 10%;
+    font-size: 4vh;
 }
