@@ -8,7 +8,7 @@ body {
 .products {
     display: flex;
     position: relative;
-    left: 30vh;
+    left: 35vh;
     flex-wrap: wrap;
     width: calc(100vw - 27vh);
 }
@@ -17,7 +17,7 @@ body {
 }
 
 input[type = text] {
-    width: 60%;
+    width: calc(60vw - 15vh);
     padding: 12px 20px;
     margin: 8px 0;
     display: inline;
