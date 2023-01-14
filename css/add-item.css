@@ -123,6 +123,6 @@ input[type=submit]  {
 .button:hover   {
     color: #EAC7C7;
     background-color: rgb(116, 116, 116);
-    border: none;
+    border: 2px solid #EAC7C7;
     cursor: pointer;
 }

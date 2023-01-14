@@ -23,7 +23,7 @@ body    {
 .button:hover   {
     color: #EAC7C7;
     background-color: rgb(116, 116, 116);
-    border: none;
+    border: 2px solid #EAC7C7;
 }
 
 .continue-shopping  {
@@ -63,10 +63,11 @@ tr  {
 
 .items  {
     padding: 2vh;
-    width: 100%;
+    /* width: 100%; */
     display: flex;
     vertical-align: middle;
     flex-wrap: wrap;
+    max-width: 100%;
 }
 
 .odd  {
@@ -166,23 +167,33 @@ tr  {
     color:rgb(75, 75, 75)
 }
 
-
-
-@media only screen and (max-width: 130vh) {
+@media only screen and (max-width: 650vh)  {
     .delete-button, .product-price, .product-quantity   {
-        margin-left: 3vw;
+        margin-left: 7vw;
     }
     .continue-shopping, .checkout  {
         width: 30%;
-        margin-left: 40%;
+        margin-left: 20%;
     }
 }
+
+
+@media only screen and (max-width: 130vh) and (min-width: 650.1vh) {
+    .delete-button, .product-price, .product-quantity   {
+        margin-left: 2vw;
+    }
+    .continue-shopping, .checkout  {
+        width: 30%;
+        margin-left: 50%;
+    }
+}
+
 @media only screen and (min-width: 130.1vh)  {
     .delete-button, .product-price, .product-quantity   {
-        margin-left: 9vw;
+        margin-left: 7vw;
     }
     .continue-shopping, .checkout  {
         width: 20%;
-        margin-left: 60%;
+        margin-left: 50%;
     }
 }
