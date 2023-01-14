@@ -8,7 +8,7 @@ body {
 .products {
     display: flex;
     position: relative;
-    left: 35vh;
+    left: 38vh;
     flex-wrap: wrap;
     width: calc(100vw - 27vh);
 }
