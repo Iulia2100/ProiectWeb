@@ -14,6 +14,7 @@ body {
 }
 .filter_bar {
     padding: 3vh;
+    overflow-y: scroll;
 }
 
 input[type = text] {
