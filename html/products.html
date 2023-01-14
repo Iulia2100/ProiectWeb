@@ -12,6 +12,7 @@
 </head>
 <body>
     <iframe src="./menu.html" id="menu_bar"></iframe>
+    <div style="width:100%; height: 10vh; position: sticky; visibility: hidden"></div>
         <form action = "action">
             <div class = "searchbar">
             <center>
@@ -19,8 +20,69 @@
                 <button name="button1">Search</button>
             </center>
             </div>
-        </form>
-        
+    </form>    
+    <div class="products">
+    <div>
+        <img src="../img/tea.jpg" width = 250px length = 60 alt="">
+        <br>
+        <p> <b>English Tea Shop<br>Intense Chai</b> </p>
+        <p>5.99$</p>
+    </div>      
+    <div>
+        <img src="../img/tea2.jpg" width = 250px length = 50 alt="">
+        <br>
+        <p> <b>English Tea Shop<br>Earl Grey</b> </p>
+        <p>4.99$</p>
+    </div>  
+    <div>
+        <img src="../img/tea3.jpg" width = 250px length = 50 alt="">
+        <br>
+        <p> <b>English Tea Shop<br>Super Berries</b> </p>
+        <p>4.99$</p>
+    </div> 
+    <div>
+        <img src="../img/tea4.jpg" width = 250px length = 50 alt="">
+        <br>
+        <p> <b>English Tea Shop<br>Pure White Tea</b> </p>
+        <p>5.99$</p>
+    </div>
+    <div>
+        <img src="../img/tea5.jpg" width = 250px length = 50 alt="">
+        <br>
+        <p> <b>English Tea Shop<br>Green Tea Pomegrante</b> </p>
+        <p>6.99$</p>
+    </div> 
+    <div>
+        <img src="../img/coffee.jpg" width = 250px length = 50 alt="">
+        <br>
+        <p> <b>Chamberlain Coffee<br>Original Family Blend</b> </p>
+        <p>16$</p>
+    </div> 
+    <div>
+        <img src="../img/coffee2.jpg" width = 250px length = 50 alt="">
+        <br>
+        <p> <b>Chamberlain Coffee<br>Careless Cat Blend</b> </p>
+        <p>12.99$</p>
+    </div>
+    <div>
+        <img src="../img/coffee.jpg" width = 250px length = 50 alt="">
+        <br>
+        <p> <b>Chamberlain Coffee<br>Original Family Blend</b> </p>
+        <p>16$</p>
+    </div> 
+    <div>
+        <img src="../img/coffee2.jpg" width = 250px length = 50 alt="">
+        <br>
+        <p> <b>Chamberlain Coffee<br>Careless Cat Blend</b> </p>
+        <p>12.99$</p>
+    </div>
+    <div>
+        <img src="../img/matcha.jpg" width = 250px length = 50 alt="">
+        <br>
+        <p> <b>Chamberlain Coffee<br>Matcha</b> </p>
+        <p>14.99$</p>
+    </div>
+    </div>
     <div class = "filter_bar" style="position: fixed; top: 10vh; right: 0h; bottom:0vh">
         <br>
         <label for=""><b>Type of product</b></label> <br>
@@ -49,6 +111,10 @@
         </label>
         <br> <br> <br>
         <label for=""><b>Price range</b></label> <br>
+        <label for=""> Min</label> <br>
+        <div class="slidecontainer"></div>
+        <input type="range" min="1" max="100" value="50">
+        <label for="">Max</label> <br>
         <div class="slidecontainer"></div>
         <input type="range" min="1" max="100" value="50">
         <br><br>

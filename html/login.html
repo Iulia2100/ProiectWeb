@@ -7,50 +7,32 @@
     <title>Login</title>
     <link rel="shortcut icon" href="../img/logo.png" />
     <link rel="stylesheet" type="text/css" href="../css/menu-iframe.css" />
-    <title>Login</title>
-    <style>
-        body {
-            font-family:'Courier New', Courier, monospace;
-        }
-        input[type = text], input[type = password] {
-            width: 50%;
-            padding: 12px 20px;
-            margin: 8px 0;
-            display: inline;
-            border: 1px solid #ccc;
-            box-sizing: border-box;
-        }
-        button {
-            background-color: #ccc;
-            color: black;
-            padding: 10px 20px;
-            margin: 8px 0;
-            border: none;
-            cursor: pointer;
-            width: 15%;
-        }
-        button:hover {
-            opacity: 0.8;
-        }
-
-    </style>
+    <link rel="stylesheet" type="text/css" href="../css/login.css" />
 </head>
 <body>
     <iframe src="./menu.html" id="menu_bar"></iframe>
-    <h2>Login</h2>
+    <div style="width:100%; height: 10vh; position: sticky; visibility: hidden"></div>
     <form action="action">
-        <div class = "container"> 
-            <label for="">Email</label><br>
+        <div class = "container" > 
+            <center>
+            <h2>Login</h2>
+            </center>
+            <label for="" id = "email">Email</label><br>
+            <center>
             <input type="text" placeholder="Enter Email" name="email" required><br>
             <br>
-            <label for="">Password</label><br>
+            </center>
+            <label for="" id = "password">Password</label><br>
+            <center>
             <input type="password" placeholder="Enter Password" name="password" required><br>
             <br>
             <button type = "submit">Login</button><br>
             <br>
             <label for="">Don't have an account? </label>
             <a href="signup.html">Sign up now!</a>
+            </center>
         </div>
+        
     </form>
 </body>
 </html>
