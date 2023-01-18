@@ -142,4 +142,6 @@ var removeGenderError = () =>    {
 }
 
 function handleForm(event) { event.preventDefault(); } 
-document.getElementById("signup").addEventListener('submit', handleForm);
+window.onload = () => {
+    document.getElementById("signup").addEventListener('submit', handleForm);
+}
