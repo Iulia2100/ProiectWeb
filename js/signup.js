@@ -8,7 +8,7 @@ var checkUsername = () =>  {
         document.getElementsByName("id")[0].className = "red-input";
         document.getElementById("usernameError").innerHTML = 
         "<div class='wrong'>Username length must be between 5 and 12 characters.</div>";
-    } else if (!/^[A-Z]*$/.test(userId.charAt(0)))   {
+    } else if (userId.charAt(0) < 'A' || userId.charAt(0) > 'Z')   {
         document.getElementsByName("id")[0].className = "red-input";
         document.getElementById("usernameError").innerHTML = 
         "<div class='wrong'>Username must start with a capital letter.</div>";
@@ -26,10 +26,10 @@ var checkName = a => {
     if (name == null || name == "") {
         document.getElementsByName("name")[a].className = "red-input";
         document.getElementsByName("nameError")[a].innerHTML = "<div class='wrong'>Please fill out this field.</div>";
-    } else if (!/^[A-Za-z]*$/.test(name))   {
+    } else if (!onlyLetters(name))   {
         document.getElementsByName("name")[a].className = "red-input";
         document.getElementsByName("nameError")[a].innerHTML = "<div class='wrong'>Name should only contain letters.</div>";
-    } else if (!/^[A-Z]*$/.test(name.charAt(0)))    {
+    } else if (name.charAt(0) < 'A' || name.charAt(0) > 'Z')    {
         document.getElementsByName("name")[a].className = "red-input";
         document.getElementsByName("nameError")[a].innerHTML = "<div class='wrong'>Name should start with a capital letter.</div>";
     } else  {
@@ -45,7 +45,7 @@ var checkEmail = () =>  {
     if (email == null || email == "")   {
         document.getElementsByName("email")[0].className = "red-input";
         document.getElementById("emailError").innerHTML = "<div class='wrong'>Please fill out this field.</div>"; 
-    } else if (!/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(email))    {
+    } else if (!isEmail(email))    {
         document.getElementsByName("email")[0].className = "red-input";
         document.getElementById("emailError").innerHTML = 
             "<div class='wrong'>Please input a valid email address.</div>";
@@ -145,4 +145,69 @@ var verifyPassword = (p, q) => {
         document.getElementsByName("pswError")[q].innerHTML = "<div class = 'correct'>The passswords match!</div>";
     }
 
+};
+
+var onlyLetters = word => {
+    for (var i = 0; i < word.length; ++i)   {
+        if (!((word.charAt(i) >= 'a' && word.charAt(i) <= 'z') 
+        || (word.charAt(i) >= 'A' && word.charAt(i) <= 'Z')))
+            return false;
+    }
+    return true;
+};
+
+var isEmail = word =>   {
+    var nrLetters = 0;
+    var section = 0;
+    for (var i = 0; i < word.length; ++i)   {
+        if (section == 0)   {
+            ++nrLetters;
+            if (word.charAt(i) <= '9' && word.charAt(i) >= '0')
+                continue;
+            if (word.charAt(i) <= 'z' && word.charAt(i) >= 'a')
+                continue;
+            if (word.charAt(i) >= 'A' && word.charAt(i) <= 'Z')
+                continue;
+            if (word.charAt(i) == '_' || word.charAt(i) == '-')
+                continue;
+            if (word.charAt(i) == '@')  {
+                ++section;
+                if (nrLetters == 1)
+                    return false;
+                nrLetters = 0;
+                continue;
+            }
+            return false;
+        } else if (section == 1)    {
+            ++nrLetters;
+            if (word.charAt(i) == '.')  {
+                if (nrLetters == 1)
+                    return false;
+                ++section;
+                nrLetters = 0;
+                continue;
+            }
+            if (word.charAt(i) == '_' || word.charAt(i) == '-')
+                continue;
+            if (word.charAt(i) <= '9' && word.charAt(i) >= '0')
+                continue;
+            if (word.charAt(i) <= 'z' && word.charAt(i) >= 'a')
+                continue;
+            if (word.charAt(i) >= 'A' && word.charAt(i) <= 'Z')
+                continue;
+            return false;
+        } else if (section == 2)    {
+            ++nrLetters;
+            if (word.charAt(i) == '_' || word.charAt(i) == '-')
+                continue;
+            if (word.charAt(i) <= '9' && word.charAt(i) >= '0')
+                continue;
+            if (word.charAt(i) <= 'z' && word.charAt(i) >= 'a')
+                continue;
+            if (word.charAt(i) >= 'A' && word.charAt(i) <= 'Z')
+                continue;
+            return false;
+        }
+    }
+    return section == 2 && nrLetters >= 2 && nrLetters <= 4;
 }
