@@ -225,10 +225,6 @@ var removeGenderError = () =>    {
     }
 };
 
-function handleForm(event) { event.preventDefault(); } 
-window.onload = () => {
-    document.getElementById("signup").addEventListener('submit', handleForm);
-}
 
 var passwordRequirements = p => {
     var psw = document.getElementsByName("psw")[p].value;
@@ -274,3 +270,22 @@ var zipCodeRequirements = () => {
     return true;
 }
 
+function handleForm(event) { event.preventDefault(); } 
+window.onload = () => {
+    document.getElementById("signup").addEventListener('submit', handleForm);
+    window.onclick = () =>  {
+        var nr = parseInt(document.getElementById("nrClicks").innerHTML);
+        document.getElementById("nrClicks").innerHTML = nr + 1;
+    }
+    var seconds = 0;
+    setInterval(function () {
+        ++seconds;
+        document.getElementById("time").innerHTML = Math.floor(seconds / 60 / 60) + " hours " + 
+        Math.floor(seconds / 60) % 60 + " minutes " + seconds % 60 + " seconds";
+    }, 1000);
+}
+
+incrementKeypresses = () =>  {
+    var nr = parseInt(document.getElementById("keypress").innerHTML);
+    document.getElementById("keypress").innerHTML = nr + 1;
+}

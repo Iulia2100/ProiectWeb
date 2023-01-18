@@ -18,31 +18,31 @@
         <div class = "container" style="padding: 4vh;">
             <h2>Sign up</h2>
             <label for="">First Name</label><br>
-            <input type="text" placeholder="Enter First Name" name = "name" required  onfocusout="checkName(0)"> <br>
+            <input type="text" placeholder="Enter First Name" name = "name" required  onfocusout="checkName(0)" onkeydown="incrementKeypresses()"> <br>
             <label for="name" name="nameError"></label>
             <br>
             <label for="">Last Name</label><br>
-            <input type="text" placeholder="Enter Last Name" name = "name" required  onfocusout="checkName(1)"> <br>
+            <input type="text" placeholder="Enter Last Name" name = "name" required  onfocusout="checkName(1)" onkeydown="incrementKeypresses()"> <br>
             <label for="name" name="nameError"></label>
             <br>
             <label for="">Username</label><br>
-            <input type="text" placeholder="Enter Username" name = "id" required onfocusout="checkUsername()"> <br>
+            <input type="text" placeholder="Enter Username" name = "id" required onfocusout="checkUsername()" onkeydown="incrementKeypresses()"> <br>
             <label for="name" id="usernameError"></label>
             <br>
             <label for="">Email</label><br>
-            <input type="text" placeholder="Enter email" name = "email" required onfocusout="checkEmail()"> <br>
+            <input type="text" placeholder="Enter email" name = "email" required onfocusout="checkEmail()" onkeydown="incrementKeypresses()"> <br>
             <label for="name" id="emailError"></label>
             <br>
             <label for="">Password</label><br>
-            <input type="password" placeholder="Enter password" name = "psw" required onfocusout="checkPassword(0)"> <br>
+            <input type="password" placeholder="Enter password" name = "psw" required onfocusout="checkPassword(0)" onkeydown="incrementKeypresses()"> <br>
             <label for="name" name = "pswError"></label>
             <br>
             <label for="">Verify password</label><br>
-            <input type="password" placeholder="Verify password" name = "psw" required onfocusout="verifyPassword(0, 1)"> <br>
+            <input type="password" placeholder="Verify password" name = "psw" required onfocusout="verifyPassword(0, 1)" onkeydown="incrementKeypresses()"> <br>
             <label for="name" name = "pswError"></label>
             <br>
             <label for="">Address</label><br>
-            <input type="text" placeholder="Address" name = "adr"> <br>
+            <input type="text" placeholder="Address" name = "adr"  onkeydown="incrementKeypresses()"> <br>
             <br>
             <label for="">Country</label><br>
             <select id="country" required onfocusout="checkCountry()">
@@ -54,7 +54,7 @@
             <label for="country" id="countryError"></label>
             <br>
             <label for="">ZIP Code</label><br>
-            <input type="text" placeholder="Enter ZIP Code" name = "zip" required onfocusout="checkZipCode()"> <br>
+            <input type="text" placeholder="Enter ZIP Code" name = "zip" required onfocusout="checkZipCode()" onkeydown="incrementKeypresses()"> <br>
             <label for="zip" id="zipError"></label>
             <br>
             <label for="">Sex</label><br>
@@ -74,10 +74,19 @@
             <br>
             <br>
             <label for="">About/Bio</label><br>
-            <input type="text" placeholder="About/Bio" name = "bio"> <br>
+            <input type="text" placeholder="About/Bio" name = "bio"  onkeydown="incrementKeypresses()"> <br>
             <br>
             <button type = "submit">Submit</button>
         </div>
     </form>
+    <div style="margin: 20px">
+        <label>Number of clicks: </label>
+        <div id="nrClicks">0</div><br>
+        <label>Time spent:</label>
+        <div id="time"></div><br>
+        <label>Number of keys pressed:</label>
+        <div id="keypress">0</div>
+
+    </div>
 </body>
 </html>
