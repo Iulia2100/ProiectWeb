@@ -34,13 +34,12 @@
             <label for="name" id="emailError"></label>
             <br>
             <label for="">Password</label><br>
-            <input type="password" placeholder="Enter password" name = "pws" required> <br>
+            <input type="password" placeholder="Enter password" name = "psw" required onfocusout="checkPassword(0)"> <br>
+            <label for="name" name = "pswError"></label>
             <br>
             <label for="">Verify password</label><br>
-            <input type="password" placeholder="Verify password" name = "psw" required> <br>
-            <br>
-            <label for="">Phone number</label><br>
-            <input type="text" placeholder="Enter Phone number" name = "phone" required> <br>
+            <input type="password" placeholder="Verify password" name = "psw" required onfocusout="verifyPassword(0, 1)"> <br>
+            <label for="name" name = "pswError"></label>
             <br>
             <label for="">Address</label><br>
             <input type="text" placeholder="Address" name = "adr"> <br>
@@ -74,7 +73,7 @@
             <br>
             <br>
             <label for="">About/Bio</label><br>
-            <input type="text" placeholder="Verify password" name = "bio"> <br>
+            <input type="text" placeholder="About/Bio" name = "bio"> <br>
             <br>
             <button type = "submit">Submit</button>
         </div>

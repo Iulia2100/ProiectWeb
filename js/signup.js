@@ -109,4 +109,41 @@ var checkForm = () =>   {
         console.log('correct name')
         document.getElementById("signup").reset();
     }
+};
+
+var checkPassword = p => {
+    var psw = document.getElementsByName("psw")[p].value;
+    if(psw == null || psw == "") {
+        document.getElementsByName("psw")[p].className = "red-input";
+        document.getElementsByName("pswError")[p].innerHTML = "<div class = 'wrong'>Please fill out this field.</div>";
+    } else if(psw.length < 12) {
+        document.getElementsByName("psw")[p].className = "red-input";
+        document.getElementsByName("pswError")[p].innerHTML = "<div class = 'wrong'>Password should be at least 12 characters long.</div>";
+    } else if(!/(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W)/.test(psw)) {
+            document.getElementsByName("psw")[p].className = "red-input";
+            document.getElementsByName("pswError")[p].innerHTML = "<div class = 'wrong'>Password should contain a combination of uppercase letters, lowercase letters, numbers, and symbols.</div>";
+    } else if(psw.length >= 12 && psw.length < 14) {
+        document.getElementsByName("psw")[p].className = "yellow-input";
+        document.getElementsByName("pswError")[p].innerHTML = "<div class = 'weak'>Your pawwsord is weak.</div>";
+    } else {
+        document.getElementsByName("psw")[p].className = "green-input";
+        document.getElementsByName("pswError")[p].innerHTML = "<div class = 'correct'>Your pawwsord looks good!</div>";
+    }
+};
+
+var verifyPassword = (p, q) => {
+    var psw1 = document.getElementsByName("psw")[p].value;
+    checkPassword(0);
+    var psw2 = document.getElementsByName("psw")[q].value;
+    if(psw2 == null || psw2 == "") {
+        document.getElementsByName("psw")[q].className = "red-input";
+        document.getElementsByName("pswError")[q].innerHTML = "<div class = 'wrong'>Please fill out this field.</div>";
+    } else if(psw1 !== psw2) {
+        document.getElementsByName("psw")[q].className = "red-input";
+        document.getElementsByName("pswError")[q].innerHTML = "<div class = 'wrong'>The passwords do not match.</div>"; 
+    } else {
+        document.getElementsByName("psw")[q].className = "green-input";
+        document.getElementsByName("pswError")[q].innerHTML = "<div class = 'correct'>The passswords match!</div>";
+    }
+
 }
