@@ -14,7 +14,7 @@
     <iframe src="./menu.html" id="menu_bar"></iframe>
     
     <div style="width:100%; height: 10vh; position: sticky; visibility: hidden"></div>
-    <form novalidate onsubmit="return checkForm();" action="#" id="signup">
+    <form novalidate onsubmit="return checkForm();" action="" id="signup">
         <div class = "container" style="padding: 4vh;">
             <h2>Sign up</h2>
             <label for="">First Name</label><br>
@@ -58,9 +58,10 @@
             <label for="zip" id="zipError"></label>
             <br>
             <label for="">Sex</label><br>
-            <input type="radio"> <label for="">Male</label> 
-            <input type="radio"> <label for="">Female</label> 
-            <input type="radio"> <label for="">Other</label> <br>
+            <input type="radio" name="sex"> <label for="sex">Female</label> 
+            <input type="radio" name="sex"> <label for="sex">Male</label> 
+            <input type="radio" name="sex"> <label for="sex">Other</label> <br>
+            <label for="sex" id="sexError"></label>
             <br>
             <label for="">Language</label><br>
             <select id="lang" required onfocusout="checkLang()">
