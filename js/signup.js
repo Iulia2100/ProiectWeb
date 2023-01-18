@@ -103,10 +103,9 @@ var checkLang = () =>    {
 }
 
 var checkForm = () =>   {
-    console.log("checked");
     if(checkName(0) & checkName(1) & checkUsername() & checkEmail() 
-        & checkLang() & checkCountry() & checkZipCode()) {
-        console.log('correct name')
+        & checkLang() & checkCountry() & checkZipCode() & checkPassword(0)
+        && verifyPassword(0, 1)) {
         document.getElementById("signup").reset();
     }
 };
