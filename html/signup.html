@@ -54,7 +54,8 @@
             </select><br>
             <br>
             <label for="">ZIP Code</label><br>
-            <input type="text" placeholder="Enter ZIP Code" name = "zip" required> <br>
+            <input type="text" placeholder="Enter ZIP Code" name = "zip" required onfocusout="checkZipCode()"> <br>
+            <label for="zip" id="zipError"></label>
             <br>
             <label for="">Sex</label><br>
             <input type="radio"> <label for="">Male</label> 

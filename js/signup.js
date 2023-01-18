@@ -51,3 +51,19 @@ var checkEmail = () =>  {
             "<div class='correct'>Looks good!</div>";
     }
 }
+
+var checkZipCode = () =>    {
+    var zip = document.getElementsByName("zip")[0].value;
+    if (zip == null || zip == "")   {
+        document.getElementsByName("zip")[0].className = "red-input";
+        document.getElementById("zipError").innerHTML = "<div class='wrong'>Please fill out this field.</div>"; 
+    } else if (!/^[1-9][0-9]{3} ?[a-z]{2}$/i.test(zip))  {
+        document.getElementsByName("zip")[0].className = "red-input";
+        document.getElementById("zipError").innerHTML = 
+            "<div class='wrong'>Please input a valid zip code.</div>"; 
+    } else  {
+        document.getElementsByName("zip")[0].className = "green-input";
+        document.getElementById("zipError").innerHTML = 
+            "<div class='correct'>Looks good!</div>"; 
+    }
+}
