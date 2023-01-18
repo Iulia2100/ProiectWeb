@@ -63,7 +63,7 @@ var checkZipCode = () =>    {
     if (zip == null || zip == "")   {
         document.getElementsByName("zip")[0].className = "red-input";
         document.getElementById("zipError").innerHTML = "<div class='wrong'>Please fill out this field.</div>"; 
-    } else if (!/^[1-9][0-9]{3} ?[a-z]{2}$/i.test(zip))  {
+    } else if (!zipCodeRequirements())  {
         document.getElementsByName("zip")[0].className = "red-input";
         document.getElementById("zipError").innerHTML = 
             "<div class='wrong'>Please input a valid zip code.</div>"; 
@@ -118,7 +118,7 @@ var checkPassword = p => {
     } else if(psw.length < 12) {
         document.getElementsByName("psw")[p].className = "red-input";
         document.getElementsByName("pswError")[p].innerHTML = "<div class = 'wrong'>Password should be at least 12 characters long.</div>";
-    } else if(!/(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W)/.test(psw)) {
+    } else if(!passwordRequirements(p)) {
             document.getElementsByName("psw")[p].className = "red-input";
             document.getElementsByName("pswError")[p].innerHTML = "<div class = 'wrong'>Password should contain a combination of uppercase letters, lowercase letters, numbers, and symbols.</div>";
     } else if(psw.length >= 12 && psw.length < 14) {
@@ -227,3 +227,47 @@ var removeGenderError = () =>    {
 
 function handleForm(event) { event.preventDefault(); } 
 document.getElementById("signup").addEventListener('submit', handleForm);
+
+var passwordRequirements = p => {
+    var psw = document.getElementsByName("psw")[p].value;
+    var letter, capitalLetter, digit, char;
+    for(i = 0; i < psw.length; i++) {
+        if(psw.charAt(i) >= 'a' && psw.charAt(i) <= "z") {
+            letter =  true;
+        }
+    }
+    for(i = 0; i < psw.length; i++) {
+        if(psw.charAt(i) >= 'A' && psw.charAt(i) <= "Z") {
+            capitalLetter = true;
+        }
+    }
+    for(i = 0; i < psw.length; i++) {
+        if(psw.charAt(i) >= 0 && psw.charAt(i) <= 9) {
+            digit = true;
+        }
+    }
+    for(i = 0; i < psw.length; i++) {
+        if((psw.charCodeAt(i) >= 33 && psw.charCodeAt(i) <= 47) || 
+        !(psw.charCodeAt(i) >= 58 && psw.charCodeAt(i) <= 64)) {
+            char = true;
+        }
+    }
+    return letter && capitalLetter && digit && char;
+}
+
+var zipCodeRequirements = () => {
+    var zip = document.getElementsByName("zip")[0].value;
+    if(zip.length != 6) return false;
+    for(i = 0; i < 4; i++) {
+        if(!(zip.charAt(i) >= '0' && zip.charAt(i) <= '9')) {
+            return false;
+        }
+    }
+    for(i = 4; i < 6; i++) {
+        if(!((zip.charAt(i) >= 'A' && zip.charAt(i) <= 'Z') ||
+        (zip.charAt(i) >= 'a' && zip.charAt(i) <= 'z'))) {
+            return false;
+        }
+    }
+    return true;
+}
