@@ -103,10 +103,10 @@ var checkLang = () =>    {
 }
 
 var checkForm = () =>   {
-    if(checkName(0) & checkName(1) & checkUsername() & checkEmail() 
+    if (checkName(0) & checkName(1) & checkUsername() & checkEmail() 
         & checkLang() & checkCountry() & checkZipCode() & checkSex() & checkPassword(0)
         && verifyPassword(0, 1)) {
-        document.getElementById("signup").reset();
+        document.getElementById("data").style.display = "block";
     }
 };
 
@@ -124,10 +124,13 @@ var checkPassword = p => {
     } else if(psw.length >= 12 && psw.length < 14) {
         document.getElementsByName("psw")[p].className = "yellow-input";
         document.getElementsByName("pswError")[p].innerHTML = "<div class = 'weak'>Your pawwsord is weak.</div>";
+        return true;
     } else {
         document.getElementsByName("psw")[p].className = "green-input";
         document.getElementsByName("pswError")[p].innerHTML = "<div class = 'correct'>Your pawwsord looks good!</div>";
+        return true;
     }
+    return false;
 };
 
 var verifyPassword = (p, q) => {
@@ -143,7 +146,9 @@ var verifyPassword = (p, q) => {
     } else {
         document.getElementsByName("psw")[q].className = "green-input";
         document.getElementsByName("pswError")[q].innerHTML = "<div class = 'correct'>The passswords match!</div>";
+        return true;
     }
+    return false;
 
 };
 
@@ -225,10 +230,6 @@ var removeGenderError = () =>    {
     }
 };
 
-function handleForm(event) { event.preventDefault(); } 
-window.onload = () => {
-    document.getElementById("signup").addEventListener('submit', handleForm);
-}
 
 var passwordRequirements = p => {
     var psw = document.getElementsByName("psw")[p].value;
@@ -274,3 +275,31 @@ var zipCodeRequirements = () => {
     return true;
 }
 
+function handleForm(event) { event.preventDefault(); } 
+window.onload = () => {
+    document.getElementById("signup").addEventListener('submit', handleForm);
+    window.onclick = () =>  {
+        var nr = parseInt(document.getElementById("nrClicks").innerHTML);
+        document.getElementById("nrClicks").innerHTML = nr + 1;
+    }
+    var seconds = 0;
+    setInterval(function () {
+        ++seconds;
+        document.getElementById("time").innerHTML = Math.floor(seconds / 60 / 60) + " hours " + 
+        Math.floor(seconds / 60) % 60 + " minutes " + seconds % 60 + " seconds";
+    }, 1000);
+    document.getElementById("signup").addEventListener("keydown", (event) =>  {
+        var nr = parseInt(document.getElementById("keypress").innerHTML);
+        document.getElementById("keypress").innerHTML = nr + 1;
+        if (event.key == "Enter")   {
+            event.preventDefault();
+        } else if (event.key.length == 1 && !event.ctrlKey)    {
+            nr = parseInt(document.getElementById("totalChars").innerHTML);
+            document.getElementById("totalChars").innerHTML = nr + 1;
+        }
+    });
+    window.addEventListener('paste', e => {
+        nr = parseInt(document.getElementById("totalChars").innerHTML);
+        document.getElementById("totalChars").innerHTML = nr + e.clipboardData.getData("Text").length;
+    });
+}
