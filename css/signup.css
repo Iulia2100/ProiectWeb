@@ -27,3 +27,19 @@ button:hover   {
     background-color: rgb(116, 116, 116);
     border: 2px solid rgb(217, 173, 180);
 }
+
+.correct    {
+    color: green;
+}
+
+.wrong  {
+    color: red;
+}
+
+.green-input    {
+    border: 1px solid green !important;
+}
+
+.red-input    {
+    border: 1px solid red !important;
+}
