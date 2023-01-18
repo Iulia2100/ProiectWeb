@@ -224,3 +224,6 @@ var removeGenderError = () =>    {
         document.getElementById("sexError").innerHTML = "";
     }
 };
+
+function handleForm(event) { event.preventDefault(); } 
+document.getElementById("signup").addEventListener('submit', handleForm);
