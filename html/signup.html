@@ -17,22 +17,56 @@
         <div class = "container" style="padding: 4vh;">
             <h2>Sign up</h2>
             <label for="">First Name</label><br>
-            <input type="text" placeholder="Enter First Name" name = "name" required> <br>
+            <input type="text" placeholder="Enter First Name" name = "firstName" required> <br>
             <br>
             <label for="">Last Name</label><br>
-            <input type="text" placeholder="Enter Last Name" name = "name" required> <br>
+            <input type="text" placeholder="Enter Last Name" name = "lastName" required> <br>
+            <br>
+            <label for="">User ID</label><br>
+            <input type="text" placeholder="Enter Last Name" name = "id" required> <br>
             <br>
             <label for="">Email</label><br>
-            <input type="text" placeholder="Enter email" email = "email" required> <br>
-            <br>
-            <label for="">Phone number</label><br>
-            <input type="text" placeholder="Enter Phone number" phone = "phone" required> <br>
+            <input type="text" placeholder="Enter email" name = "email" required> <br>
             <br>
             <label for="">Password</label><br>
-            <input type="password" placeholder="Enter password" psw = "pws" required> <br>
+            <input type="password" placeholder="Enter password" name = "pws" required> <br>
             <br>
             <label for="">Verify password</label><br>
-            <input type="password" placeholder="Verify password" psw = "psw" required> <br>
+            <input type="password" placeholder="Verify password" name = "psw" required> <br>
+            <br>
+            <label for="">Phone number</label><br>
+            <input type="text" placeholder="Enter Phone number" name = "phone" required> <br>
+            <br>
+            <label for="">Address</label><br>
+            <input type="text" placeholder="Address" name = "adr"> <br>
+            <br>
+            <label for="">Country</label><br>
+            <select name="category" required>
+                <option value="" selected disabled hidden>Choose a country</option>
+                <option value="uk">UK</option>
+                <option value="nl">Netherlands</option>
+                <option value="ro">Romania</option>
+            </select><br>
+            <br>
+            <label for="">ZIP Code</label><br>
+            <input type="text" placeholder="Enter ZIP Code" name = "zip" required> <br>
+            <br>
+            <label for="">Sex</label><br>
+            <input type="radio"> <label for="">Male</label> 
+            <input type="radio"> <label for="">Female</label> 
+            <input type="radio"> <label for="">Other</label> <br>
+            <br>
+            <label for="">Language</label><br>
+            <select name="category" required>
+                <option value="" selected disabled hidden>Choose a language</option>
+                <option value="english">English</option>
+                <option value="dutch">Dutch</option>
+                <option value="romanian">Romanian</option>
+            </select>
+            <br>
+            <br>
+            <label for="">About/Bio</label><br>
+            <input type="text" placeholder="Verify password" name = "bio"> <br>
             <br>
             <button type = "submit">Submit</button>
         </div>
