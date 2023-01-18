@@ -226,7 +226,9 @@ var removeGenderError = () =>    {
 };
 
 function handleForm(event) { event.preventDefault(); } 
-document.getElementById("signup").addEventListener('submit', handleForm);
+window.onload = () => {
+    document.getElementById("signup").addEventListener('submit', handleForm);
+}
 
 var passwordRequirements = p => {
     var psw = document.getElementsByName("psw")[p].value;
@@ -271,3 +273,4 @@ var zipCodeRequirements = () => {
     }
     return true;
 }
+
