@@ -14,62 +14,53 @@
     <iframe src="./menu.html" id="menu_bar"></iframe>
     
     <div style="width:100%; height: 10vh; position: sticky; visibility: hidden"></div>
-    <form novalidate onsubmit="return checkForm();" action="#" id="signup">
+    <form action="#" id="signup">
         <div class = "container" style="padding: 4vh;">
             <h2>Sign up</h2>
             <label for="">First Name</label><br>
-            <input type="text" placeholder="Enter First Name" name = "name" required  onfocusout="checkName(0)"> <br>
-            <label for="name" name="nameError"></label>
+            <input type="text" placeholder="Enter First Name" name = "name" required> <br>
             <br>
             <label for="">Last Name</label><br>
-            <input type="text" placeholder="Enter Last Name" name = "name" required  onfocusout="checkName(1)"> <br>
-            <label for="name" name="nameError"></label>
+            <input type="text" placeholder="Enter Last Name" name = "name" required> <br>
             <br>
             <label for="">Username</label><br>
-            <input type="text" placeholder="Enter Username" name = "id" required onfocusout="checkUsername()"> <br>
-            <label for="name" id="usernameError"></label>
+            <input type="text" placeholder="Enter Username" name = "id" required> <br>
             <br>
             <label for="">Email</label><br>
-            <input type="text" placeholder="Enter email" name = "email" required onfocusout="checkEmail()"> <br>
-            <label for="name" id="emailError"></label>
+            <input type="email" placeholder="Enter email" name = "email" required> <br>
             <br>
             <label for="">Password</label><br>
-            <input type="password" placeholder="Enter password" name = "psw" required onfocusout="checkPassword(0)"> <br>
-            <label for="name" name = "pswError"></label>
+            <input type="password" placeholder="Enter password" name = "psw" required> <br>
             <br>
             <label for="">Verify password</label><br>
-            <input type="password" placeholder="Verify password" name = "psw" required onfocusout="verifyPassword(0, 1)"> <br>
-            <label for="name" name = "pswError"></label>
+            <input type="password" placeholder="Verify password" name = "psw" required> <br>
             <br>
             <label for="">Address</label><br>
             <input type="text" placeholder="Address" name = "adr"> <br>
             <br>
             <label for="">Country</label><br>
-            <select id="country" required onfocusout="checkCountry()">
+            <select id="country" required>
                 <option value="" selected disabled hidden>Choose a country</option>
                 <option value="uk">UK</option>
                 <option value="nl">Netherlands</option>
                 <option value="ro">Romania</option>
             </select><br>
-            <label for="country" id="countryError"></label>
             <br>
             <label for="">ZIP Code</label><br>
-            <input type="text" placeholder="Enter ZIP Code" name = "zip" required onfocusout="checkZipCode()"> <br>
-            <label for="zip" id="zipError"></label>
+            <input type="text" placeholder="Enter ZIP Code" name = "zip" required> <br>
             <br>
             <label for="">Sex</label><br>
-            <input type="radio"> <label for="">Male</label> 
-            <input type="radio"> <label for="">Female</label> 
-            <input type="radio"> <label for="">Other</label> <br>
+            <input type="radio" name="sex" required> <label for="">Female</label> 
+            <input type="radio" name="sex"> <label for="">Male</label> 
+            <input type="radio" name="sex"> <label for="">Other</label> <br>
             <br>
             <label for="">Language</label><br>
-            <select id="lang" required onfocusout="checkLang()">
+            <select id="lang" required>
                 <option value="" selected disabled hidden>Choose a language</option>
                 <option value="english">English</option>
                 <option value="dutch">Dutch</option>
                 <option value="romanian">Romanian</option>
             </select>
-            <label for="lang" id="langError"></label>
             <br>
             <br>
             <label for="">About/Bio</label><br>
