@@ -25,11 +25,13 @@
             <input type="text" placeholder="Enter Last Name" name = "name" required  onfocusout="checkName(1)"> <br>
             <label for="name" name="nameError"></label>
             <br>
-            <label for="">User ID</label><br>
-            <input type="text" placeholder="Enter Username" name = "id" required> <br>
+            <label for="">Username</label><br>
+            <input type="text" placeholder="Enter Username" name = "id" required onfocusout="checkUsername()"> <br>
+            <label for="name" id="usernameError"></label>
             <br>
             <label for="">Email</label><br>
-            <input type="text" placeholder="Enter email" name = "email" required> <br>
+            <input type="text" placeholder="Enter email" name = "email" required onfocusout="checkEmail()"> <br>
+            <label for="name" id="emailError"></label>
             <br>
             <label for="">Password</label><br>
             <input type="password" placeholder="Enter password" name = "pws" required> <br>

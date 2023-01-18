@@ -1,11 +1,23 @@
-// var checkUserId = () =>  {
-//     var userId = document.getElementsByName("userId")[0].value;
-//     if (userId.length < 5 || userId.length > 12)
-//         // document.getElementById("userIdError") = "Username length must be between 5 and 12 characters";
-//     if (userId.charAt(0) < 'A' || userId.charAt(0) > 'Z')   {
-//         return "Username must sta"
-//     }
-// }
+var checkUsername = () =>  {
+    var userId = document.getElementsByName("id")[0].value;
+    if (userId == null || userId == "") {
+        document.getElementsByName("id")[0].className = "red-input";
+        document.getElementById("usernameError").innerHTML = 
+        "<div class='wrong'>Please fill out this field.</div>";
+    } else if (userId.length < 5 || userId.length > 12)    {
+        document.getElementsByName("id")[0].className = "red-input";
+        document.getElementById("usernameError").innerHTML = 
+        "<div class='wrong'>Username length must be between 5 and 12 characters.</div>";
+    } else if (!/^[A-Z]*$/.test(userId.charAt(0)))   {
+        document.getElementsByName("id")[0].className = "red-input";
+        document.getElementById("usernameError").innerHTML = 
+        "<div class='wrong'>Username must start with a capital letter.</div>";
+    } else  {
+        document.getElementsByName("id")[0].className = "green-input";
+        document.getElementById("usernameError").innerHTML = 
+        "<div class='correct'>Looks good!</div>";
+    }
+}
 
 var checkName = a => {
     var name = document.getElementsByName("name")[a].value;
@@ -23,3 +35,19 @@ var checkName = a => {
         document.getElementsByName("nameError")[a].innerHTML = "<div class='correct'>Looks good!</div>";
     }
 };
+
+var checkEmail = () =>  {
+    var email = document.getElementsByName("email")[0].value;
+    if (email == null || email == "")   {
+        document.getElementsByName("email")[0].className = "red-input";
+        document.getElementById("emailError").innerHTML = "<div class='wrong'>Please fill out this field.</div>"; 
+    } else if (!/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/.test(email))    {
+        document.getElementsByName("email")[0].className = "red-input";
+        document.getElementById("emailError").innerHTML = 
+            "<div class='wrong'>Please input a valid email address.</div>";
+    } else    {
+        document.getElementsByName("email")[0].className = "green-input";
+        document.getElementById("emailError").innerHTML = 
+            "<div class='correct'>Looks good!</div>";
+    }
+}
