@@ -104,7 +104,7 @@ var checkLang = () =>    {
 
 var checkForm = () =>   {
     if(checkName(0) & checkName(1) & checkUsername() & checkEmail() 
-        & checkLang() & checkCountry() & checkZipCode() & checkPassword(0)
+        & checkLang() & checkCountry() & checkZipCode() & checkSex() & checkPassword(0)
         && verifyPassword(0, 1)) {
         document.getElementById("signup").reset();
     }
@@ -210,4 +210,17 @@ var isEmail = word =>   {
         }
     }
     return section == 2 && nrLetters >= 2 && nrLetters <= 4;
-}
+};
+
+var checkSex = () =>    {
+    if (document.querySelector('input[name="sex"]:checked') == null)    {
+        document.getElementById("sexError").innerHTML = "<div class = 'wrong'>Please select gender.</div>";
+        return false;
+    }
+    return true;
+};
+var removeGenderError = () =>    {
+    if (document.querySelector('input[name="sex"]:checked') != null)    {
+        document.getElementById("sexError").innerHTML = "";
+    }
+};

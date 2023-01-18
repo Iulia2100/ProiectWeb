@@ -58,9 +58,10 @@
             <label for="zip" id="zipError"></label>
             <br>
             <label for="">Sex</label><br>
-            <input type="radio"> <label for="">Male</label> 
-            <input type="radio"> <label for="">Female</label> 
-            <input type="radio"> <label for="">Other</label> <br>
+            <input type="radio" name="sex" onfocusout="removeGenderError()"> <label for="sex">Female</label> 
+            <input type="radio" name="sex" onfocusout="removeGenderError()"> <label for="sex">Male</label> 
+            <input type="radio" name="sex" onfocusout="removeGenderError()"> <label for="sex">Other</label> <br>
+            <label for="sex" id="sexError"></label>
             <br>
             <label for="">Language</label><br>
             <select id="lang" required onfocusout="checkLang()">
