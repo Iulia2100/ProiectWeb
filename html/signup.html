@@ -24,16 +24,16 @@
             <input type="text" placeholder="Enter Last Name" name = "name" required> <br>
             <br>
             <label for="">Username</label><br>
-            <input type="text" placeholder="Enter Username" name = "id" required> <br>
+            <input type="text" placeholder="Enter Username" name = "id" required minlength="5" maxlength="12"> <br>
             <br>
             <label for="">Email</label><br>
             <input type="email" placeholder="Enter email" name = "email" required> <br>
             <br>
             <label for="">Password</label><br>
-            <input type="password" placeholder="Enter password" name = "psw" required> <br>
+            <input type="password" placeholder="Enter password" name = "psw" required minlength="12"> <br>
             <br>
             <label for="">Verify password</label><br>
-            <input type="password" placeholder="Verify password" name = "psw" required> <br>
+            <input type="password" placeholder="Verify password" name = "psw" required minlength="12"> <br>
             <br>
             <label for="">Address</label><br>
             <input type="text" placeholder="Address" name = "adr"> <br>
@@ -47,7 +47,7 @@
             </select><br>
             <br>
             <label for="">ZIP Code</label><br>
-            <input type="text" placeholder="Enter ZIP Code" name = "zip" required> <br>
+            <input type="text" placeholder="Enter ZIP Code" name = "zip" required minlength="6" maxlength="6"> <br>
             <br>
             <label for="">Sex</label><br>
             <input type="radio" name="sex" required> <label for="">Female</label> 
