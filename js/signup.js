@@ -130,6 +130,16 @@ var verifyPassword = (p, q) => {
 
 var checkSex = () =>    {
     if (document.querySelector('input[name="sex"]:checked') == null)    {
-        document.getElementById("sexError").innerHTML = "<div class = 'wrong'>Please select gender.</div>"
+        document.getElementById("sexError").innerHTML = "<div class = 'wrong'>Please select gender.</div>";
+        return false;
+    }
+    return true;
+};
+var removeGenderError = () =>    {
+    if (document.querySelector('input[name="sex"]:checked') != null)    {
+        document.getElementById("sexError").innerHTML = "";
     }
 }
+
+function handleForm(event) { event.preventDefault(); } 
+document.getElementById("signup").addEventListener('submit', handleForm);
