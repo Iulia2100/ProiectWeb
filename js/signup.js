@@ -16,7 +16,9 @@ var checkUsername = () =>  {
         document.getElementsByName("id")[0].className = "green-input";
         document.getElementById("usernameError").innerHTML = 
         "<div class='correct'>Looks good!</div>";
+        return true;
     }
+    return false;
 }
 
 var checkName = a => {
@@ -33,7 +35,9 @@ var checkName = a => {
     } else  {
         document.getElementsByName("name")[a].className = "green-input";
         document.getElementsByName("nameError")[a].innerHTML = "<div class='correct'>Looks good!</div>";
+        return true;
     }
+    return false;
 };
 
 var checkEmail = () =>  {
@@ -49,7 +53,9 @@ var checkEmail = () =>  {
         document.getElementsByName("email")[0].className = "green-input";
         document.getElementById("emailError").innerHTML = 
             "<div class='correct'>Looks good!</div>";
+        return true;
     }
+    return false;
 }
 
 var checkZipCode = () =>    {
@@ -65,5 +71,42 @@ var checkZipCode = () =>    {
         document.getElementsByName("zip")[0].className = "green-input";
         document.getElementById("zipError").innerHTML = 
             "<div class='correct'>Looks good!</div>"; 
+        return true;
+    }
+    return false;
+}
+
+var checkCountry = () =>    {
+    var country = document.getElementById("country").value;
+    if (country == null || country == "")   {
+        document.getElementById("country").className = "red-input";
+        document.getElementById("countryError").innerHTML = "<div class='wrong'>Please select your country.</div>"; 
+    } else  {
+        document.getElementById("country").className = "green-input";
+        document.getElementById("countryError").innerHTML = ""; 
+        return true;
+    }
+    return false;
+}
+
+var checkLang = () =>    {
+    var lang = document.getElementById("lang").value;
+    if (lang == null || lang == "")   {
+        document.getElementById("lang").className = "red-input";
+        document.getElementById("langError").innerHTML = "<div class='wrong'>Please select your preferred language.</div>"; 
+    } else  {
+        document.getElementById("lang").className = "green-input";
+        document.getElementById("langError").innerHTML = ""; 
+        return true;
+    }
+    return false;
+}
+
+var checkForm = () =>   {
+    console.log("checked");
+    if(checkName(0) & checkName(1) & checkUsername() & checkEmail() 
+        & checkLang() & checkCountry() & checkZipCode()) {
+        console.log('correct name')
+        document.getElementById("signup").reset();
     }
 }

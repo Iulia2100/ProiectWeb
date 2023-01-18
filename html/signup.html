@@ -14,7 +14,7 @@
     <iframe src="./menu.html" id="menu_bar"></iframe>
     
     <div style="width:100%; height: 10vh; position: sticky; visibility: hidden"></div>
-    <form action="action">
+    <form novalidate onsubmit="return checkForm();" action="#" id="signup">
         <div class = "container" style="padding: 4vh;">
             <h2>Sign up</h2>
             <label for="">First Name</label><br>
@@ -46,12 +46,13 @@
             <input type="text" placeholder="Address" name = "adr"> <br>
             <br>
             <label for="">Country</label><br>
-            <select name="category" required>
+            <select id="country" required onfocusout="checkCountry()">
                 <option value="" selected disabled hidden>Choose a country</option>
                 <option value="uk">UK</option>
                 <option value="nl">Netherlands</option>
                 <option value="ro">Romania</option>
             </select><br>
+            <label for="country" id="countryError"></label>
             <br>
             <label for="">ZIP Code</label><br>
             <input type="text" placeholder="Enter ZIP Code" name = "zip" required onfocusout="checkZipCode()"> <br>
@@ -63,12 +64,13 @@
             <input type="radio"> <label for="">Other</label> <br>
             <br>
             <label for="">Language</label><br>
-            <select name="category" required>
+            <select id="lang" required onfocusout="checkLang()">
                 <option value="" selected disabled hidden>Choose a language</option>
                 <option value="english">English</option>
                 <option value="dutch">Dutch</option>
                 <option value="romanian">Romanian</option>
             </select>
+            <label for="lang" id="langError"></label>
             <br>
             <br>
             <label for="">About/Bio</label><br>
