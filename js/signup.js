@@ -87,20 +87,19 @@ var checkForm = () =>   {
     if(checkName(0) & checkName(1) & checkUsername() & checkEmail() 
         & checkLang() & checkCountry() & checkZipCode() & checkSex() & checkPassword(0)
         && verifyPassword(0, 1)) {
-        document.getElementById("signup").reset();
-        alert("First name: " + document.getElementsByName("name")[0].value 
-        + "\nLast name: " + document.getElementsByName("name")[1].value
-        + "\nUsername: " + document.getElementsByName("id")[0].value
-        + "\nEmail: " + document.getElementsByName("email")[0].value
-        + "\nPassword: " + document.getElementsByName("psw")[0].value
-        + "\nPassword verification: " + document.getElementsByName("psw")[1].value
-        + "\nAddress: " + document.getElementsByName("adr")[0].value
-        + "\nCountry: " + document.getElementById("country").value
-        + "\nZip Code: " + document.getElementsByName("zip")[0].value
-        + "\nSex: " + (document.querySelector('input[name="sex"]:checked') == null ? "" : 
-        document.querySelector('input[name="sex"]:checked').nextElementSibling.innerHTML)
-        + "\nLanguage: " + document.getElementById("lang").value
-        + "\nAbout/bio: " + document.getElementsByName("bio")[0].value);
+            alert("First name: " + document.getElementsByName("name")[0].value 
+            + "\nLast name: " + document.getElementsByName("name")[1].value
+            + "\nUsername: " + document.getElementsByName("id")[0].value
+            + "\nEmail: " + document.getElementsByName("email")[0].value
+            + "\nPassword: " + document.getElementsByName("psw")[0].value
+            + "\nPassword verification: " + document.getElementsByName("psw")[1].value
+            + "\nAddress: " + document.getElementsByName("adr")[0].value
+            + "\nCountry: " + document.getElementById("country").value
+            + "\nZip Code: " + document.getElementsByName("zip")[0].value
+            + "\nSex: " + (document.querySelector('input[name="sex"]:checked') == null ? "" : 
+            document.querySelector('input[name="sex"]:checked').nextElementSibling.innerHTML)
+            + "\nLanguage: " + document.getElementById("lang").value
+            + "\nAbout/bio: " + document.getElementsByName("bio")[0].value);
     }
 };
 
@@ -115,13 +114,16 @@ var checkPassword = p => {
     } else if(!/(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*\W)/.test(psw)) {
             document.getElementsByName("psw")[p].className = "red-input";
             document.getElementsByName("pswError")[p].innerHTML = "<div class = 'wrong'>Password should contain a combination of uppercase letters, lowercase letters, numbers, and symbols.</div>";
-    } else if(/^.{12,14}$/.test(psw)) {
+        } else if(/^.{12,14}$/.test(psw)) {
         document.getElementsByName("psw")[p].className = "yellow-input";
         document.getElementsByName("pswError")[p].innerHTML = "<div class = 'weak'>Your pawwsord is weak.</div>";
+        return true;
     } else {
         document.getElementsByName("psw")[p].className = "green-input";
         document.getElementsByName("pswError")[p].innerHTML = "<div class = 'correct'>Your pawwsord looks good!</div>";
+        return true;
     }
+    return false;
 };
 
 var verifyPassword = (p, q) => {
@@ -137,7 +139,9 @@ var verifyPassword = (p, q) => {
     } else {
         document.getElementsByName("psw")[q].className = "green-input";
         document.getElementsByName("pswError")[q].innerHTML = "<div class = 'correct'>The passswords match!</div>";
+        return true;
     }
+    return false;
 
 }
 
