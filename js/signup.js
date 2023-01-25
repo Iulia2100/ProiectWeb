@@ -88,6 +88,19 @@ var checkForm = () =>   {
         & checkLang() & checkCountry() & checkZipCode() & checkSex() & checkPassword(0)
         && verifyPassword(0, 1)) {
         document.getElementById("signup").reset();
+        alert("First name: " + document.getElementsByName("name")[0].value 
+        + "\nLast name: " + document.getElementsByName("name")[1].value
+        + "\nUsername: " + document.getElementsByName("id")[0].value
+        + "\nEmail: " + document.getElementsByName("email")[0].value
+        + "\nPassword: " + document.getElementsByName("psw")[0].value
+        + "\nPassword verification: " + document.getElementsByName("psw")[1].value
+        + "\nAddress: " + document.getElementsByName("adr")[0].value
+        + "\nCountry: " + document.getElementById("country").value
+        + "\nZip Code: " + document.getElementsByName("zip")[0].value
+        + "\nSex: " + (document.querySelector('input[name="sex"]:checked') == null ? "" : 
+        document.querySelector('input[name="sex"]:checked').nextElementSibling.innerHTML)
+        + "\nLanguage: " + document.getElementById("lang").value
+        + "\nAbout/bio: " + document.getElementsByName("bio")[0].value);
     }
 };
 
